@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Farid | Software & AI Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Mohamed Farid — Computer Science & Artificial Intelligence Engineer delivering end-to-end systems from firmware to full-stack platforms." />
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome Icons for High-Trust Enterprise UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              navy: '#0F172A',
+              slate: '#1E293B',
+              muted: '#475569',
+              border: '#E2E8F0',
+              bgLight: '#F8FAFC',
+              accent: '#2563EB',
+              accentHover: '#1D4ED8',
+              accentLight: '#EFF6FF',
+              success: '#059669',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #0F172A;
+      background-color: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+    .badge-outline {
+      border: 1px solid #CBD5E1;
+      transition: all 0.2s ease-in-out;
+    }
+    .badge-outline:hover {
+      border-color: #2563EB;
+      background-color: #EFF6FF;
+      color: #1D4ED8;
+    }
+    .project-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- TOP STATUS / RECRUITER BANNER -->
+  <aside class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium text-slate-300">Targeting AI & Software Engineering Positions • Open to Select Opportunities</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span class="hover:text-white transition"><i class="fa-solid fa-location-dot mr-1"></i> Cairo, Egypt (Relocation / Remote Available)</span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <a href="mailto:mohamadfarid060304@gmail.com" class="hover:text-blue-400 transition font-mono"><i class="fa-regular fa-envelope mr-1"></i> mohamadfarid060304@gmail.com</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold font-mono text-sm tracking-wider shadow-sm group-hover:bg-blue-600 transition">
+          MF
+        </div>
+        <div>
+          <span class="text-base font-bold tracking-tight text-slate-900 block leading-tight">Mohamed Farid</span>
+          <span class="text-[11px] text-slate-500 font-medium tracking-wide uppercase">Software & AI Engineer</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-blue-600 transition">Background</a>
+        <a href="#skills" class="hover:text-blue-600 transition">Competencies</a>
+        <a href="#projects" class="hover:text-blue-600 transition">Case Studies</a>
+        <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/mohamadfarid060304-glitch" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition" title="GitHub Profile">
+          <i class="fa-brands fa-github text-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mohamed-el-gabrony-data-science" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition" title="LinkedIn Profile">
+          <i class="fa-brands fa-linkedin text-lg"></i>
+        </a>
+        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-slate-900 hover:bg-blue-600 rounded-lg transition shadow-sm">
+          Get in Touch
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 1. HERO SECTION (THE EXECUTIVE SUMMARY) -->
+  <section class="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column (Copy & CTA) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold tracking-wide">
+            <i class="fa-solid fa-code-commit text-blue-600"></i>
+            <span>Engineering & AI Architecture • ECPC Competitor</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Building Scalable <span class="text-blue-600">AI</span> &amp; <span class="text-slate-900">Software</span> Solutions.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed">
+            <strong class="font-semibold text-slate-800">Mohamed Farid</strong> — Computer Science &amp; Artificial Intelligence Engineer delivering end-to-end systems from firmware to full-stack platforms.
+          </p>
+
+          <p class="text-sm text-slate-500 leading-relaxed">
+            Bridging foundational algorithmic problem-solving with applied computer vision, micro-controller firmware (ESP32/C++), and resilient cloud-connected software architectures.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a href="#projects" class="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition group">
+              View Technical Projects
+              <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="mailto:mohamadfarid060304@gmail.com?subject=Engineering%20Resume%20Request%20-%20Mohamed%20Farid" class="inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:border-slate-400 rounded-lg shadow-sm transition">
+              <i class="fa-solid fa-file-pdf mr-2 text-slate-500"></i>
+              Download Resume
+            </a>
+          </div>
+
+          <!-- Quick Credibility Matrix -->
+          <div class="pt-4 border-t border-slate-200/80 grid grid-cols-3 gap-4">
+            <div>
+              <span class="block text-xl sm:text-2xl font-bold text-slate-900 font-mono">4+</span>
+              <span class="text-xs text-slate-500 font-medium">Core Case Studies</span>
+            </div>
+            <div>
+              <span class="block text-xl sm:text-2xl font-bold text-slate-900 font-mono">3</span>
+              <span class="text-xs text-slate-500 font-medium">Elite Fellowships (ITI/NTI/DEPI)</span>
+            </div>
+            <div>
+              <span class="block text-xl sm:text-2xl font-bold text-slate-900 font-mono">End-to-End</span>
+              <span class="text-xs text-slate-500 font-medium">Firmware to Cloud</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column (Headshot & Profile Card) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <!-- Decorative enterprise accents -->
+            <div class="absolute -top-3 -right-3 w-28 h-28 bg-blue-100 rounded-2xl -z-10"></div>
+            <div class="absolute -bottom-3 -left-3 w-28 h-28 bg-slate-100 rounded-2xl -z-10"></div>
+
+            <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
+              <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-slate-100 border border-slate-100">
+                <img src="profile.jpg" alt="Mohamed Farid - Software and AI Engineer" class="w-full h-full object-cover object-top" onerror="this.src='صوره ليا.jpeg'" />
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent p-4 text-white">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 backdrop-blur-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verified Candidate
+                  </span>
+                  <h3 class="text-base font-bold mt-1">Mohamed Farid</h3>
+                  <p class="text-xs text-slate-300">Software &amp; Artificial Intelligence Engineer</p>
+                </div>
+              </div>
+
+              <!-- Quick Verification List -->
+              <div class="mt-3 p-3 bg-slate-50 rounded-lg text-xs space-y-1.5 text-slate-600 font-mono">
+                <div class="flex items-center justify-between">
+                  <span>Algorithms:</span>
+                  <span class="font-semibold text-slate-800">ECPC Competitor</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span>Fellowships:</span>
+                  <span class="font-semibold text-slate-800">ITI • NTI • DEPI</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span>Technical Scope:</span>
+                  <span class="font-semibold text-slate-800">C++ / Python / Web</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROFESSIONAL BACKGROUND (ABOUT ME) -->
+  <section id="about" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold tracking-wider uppercase text-blue-600">Executive Summary</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
+          Engineering Rigor Backed by Competitive Problem Solving
+        </h2>
+        <p class="text-slate-600 mt-3 text-base leading-relaxed">
+          A disciplined Computer Science &amp; AI Engineer with a rare combination of competitive algorithmic training, deep hardware understanding, and modern system development experience.
+        </p>
+      </div>
+
+      <!-- 3 Key Pillars -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative">
+          <div class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center text-lg mb-5 shadow-sm">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Foundational Algorithmic Rigor</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Honed through active participation in the prestigious <strong>Egyptian Collegiate Programming Contest (ECPC)</strong>. Deep grounding in data structures, computational complexity, memory optimization, and deterministic execution.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-500 font-mono">
+            Focus: O(N) Efficiency • Dynamic Programming • Graph Theory
+          </div>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative">
+          <div class="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center text-lg mb-5 shadow-sm">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Prestigious National Fellowships</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Selected for top-tier national technology acceleration tracks under the <strong>Information Technology Institute (ITI)</strong>, <strong>National Telecommunication Institute (NTI)</strong>, and <strong>DEPI (Digital Egypt Pioneers Initiative)</strong>.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-500 font-mono">
+            Vetted: Government &amp; Industry Excellence Cohorts
+          </div>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 relative">
+          <div class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center text-lg mb-5 shadow-sm">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">End-to-End Systems Engineering</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Uniquely capable across the entire engineering stack: writing low-level C++ firmware for ESP32 microcontrollers, deploying computer vision pipelines (YOLO/OpenCV), and building responsive client-facing interfaces.
+          </p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-500 font-mono">
+            Continuum: Silicon &rarr; Edge AI &rarr; Full-Stack Web
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. CORE COMPETENCIES (TECHNICAL SKILLS MATRIX) -->
+  <section id="skills" class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold tracking-wider uppercase text-blue-600">Recruiter &amp; ATS Matrix</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
+            Technical Competencies &amp; Toolkit
+          </h2>
+          <p class="text-slate-600 mt-2 text-sm max-w-xl">
+            Structured categorization for rapid evaluation by engineering hiring managers and automated applicant tracking systems.
+          </p>
+        </div>
+        <div class="text-xs font-mono text-slate-500 bg-white border border-slate-200 px-3 py-1.5 rounded-md self-start md:self-auto">
+          Updated: Q3 2026 • Verified Production Proficiency
+        </div>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center gap-2 text-slate-900 font-bold mb-4">
+            <i class="fa-solid fa-code text-blue-600"></i>
+            <h3>Software &amp; Web</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Python</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">C++</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">SQL</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">JavaScript</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">HTML5</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">CSS3</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center gap-2 text-slate-900 font-bold mb-4">
+            <i class="fa-solid fa-robot text-blue-600"></i>
+            <h3>AI &amp; Data Science</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">OpenCV</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">YOLO</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Pandas</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">NumPy</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Matplotlib</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Seaborn</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center gap-2 text-slate-900 font-bold mb-4">
+            <i class="fa-solid fa-bolt text-blue-600"></i>
+            <h3>Embedded &amp; Hardware</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">ESP32</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">GPIO Config</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Hardware Wiring</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Actuator Control</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Sensor Interfaces</span>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center gap-2 text-slate-900 font-bold mb-4">
+            <i class="fa-solid fa-sliders text-blue-600"></i>
+            <h3>Tools &amp; Methods</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">System Architecture</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Requirements Eng.</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Blender 3D</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">VS Code</span>
+            <span class="badge-outline text-xs px-2.5 py-1 rounded bg-white text-slate-700 font-medium">Jupyter Notebooks</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. TECHNICAL CASE STUDIES (FEATURED PROJECTS) -->
+  <section id="projects" class="py-20 bg-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold tracking-wider uppercase text-blue-600">Portfolio Work</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
+          Featured Technical Case Studies
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm leading-relaxed">
+          Rigorous engineering case studies detailing architectural problem definition, technical stack choices, and measurable impact.
+        </p>
+      </div>
+
+      <div class="mt-12 space-y-8">
+        
+        <!-- Project 1: AgriRobot Prototype -->
+        <article class="project-card bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+            <div class="space-y-4 flex-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded text-xs font-bold bg-blue-100 text-blue-800 font-mono">CASE STUDY #01</span>
+                <span class="text-xs text-slate-500 font-medium">Embedded Systems &bull; IoT &bull; 3D Modeling</span>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900">
+                AgriRobot Prototype: Autonomous Agricultural Monitoring System
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                An integrated, low-cost smart agricultural robot designed to deliver real-time field telemetry, automated actuator operations, and remote operational control for modern farming.
+              </p>
+
+              <!-- STAR Format Breakdown -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Problem</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Agricultural monitoring in rugged environments requires dependable, low-latency firmware control without reliance on expensive proprietary industrial setups.
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Architecture</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Custom C++ firmware running on ESP32 microcontrollers, integrated with discrete GPIO sensors, web telemetry socket protocols, and Blender 3D CAD visualization.
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider block mb-1">Impact</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Delivered a fully operational hardware prototype with a responsive web dashboard for bi-directional actuator control and spatial digital-twin inspection.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">C++ Firmware</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">ESP32</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">GPIO &amp; Sensor Wiring</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">Web Control Dashboard</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">Blender 3D</span>
+              </div>
+            </div>
+
+            <!-- Action Button / Link -->
+            <div class="lg:w-48 flex flex-col gap-2 shrink-0">
+              <a href="https://github.com/mohamadfarid060304-glitch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-4 py-2.5 text-xs font-semibold text-slate-800 bg-white border border-slate-300 hover:bg-slate-100 rounded-lg transition shadow-sm">
+                <i class="fa-brands fa-github mr-2"></i> View Repository
+              </a>
+              <span class="text-[11px] text-center text-slate-400">End-to-end hardware build</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Smart Assistive Vision Framework -->
+        <article class="project-card bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+            <div class="space-y-4 flex-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded text-xs font-bold bg-blue-100 text-blue-800 font-mono">CASE STUDY #02</span>
+                <span class="text-xs text-slate-500 font-medium">Computer Vision &bull; Deep Learning &bull; Edge AI</span>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900">
+                Smart Assistive Vision Framework for Object &amp; Hazard Detection
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                An edge-optimized computer vision pipeline delivering real-time scene understanding and proximity hazard alerts to support visually impaired individuals in dynamic environments.
+              </p>
+
+              <!-- STAR Format Breakdown -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Problem</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Assistive navigation demands millisecond-level inference with minimal false positives under varying lighting, shadows, and rapid camera movements.
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Architecture</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Constructed using YOLO object detection models optimized for streaming video feeds via OpenCV, coupled with vectorized spatial clustering using NumPy.
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider block mb-1">Impact</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Achieved robust real-time tracking of everyday obstacles and critical navigation cues with low latency suitable for edge assistive deployment.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">Python</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">YOLO</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">OpenCV</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">NumPy</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">Real-Time Inference</span>
+              </div>
+            </div>
+
+            <!-- Action Button / Link -->
+            <div class="lg:w-48 flex flex-col gap-2 shrink-0">
+              <a href="https://github.com/mohamadfarid060304-glitch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-4 py-2.5 text-xs font-semibold text-slate-800 bg-white border border-slate-300 hover:bg-slate-100 rounded-lg transition shadow-sm">
+                <i class="fa-brands fa-github mr-2"></i> View Architecture
+              </a>
+              <span class="text-[11px] text-center text-slate-400">AI pipeline &amp; model weights</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Tourism Software Platform -->
+        <article class="project-card bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+            <div class="space-y-4 flex-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded text-xs font-bold bg-blue-100 text-blue-800 font-mono">CASE STUDY #03</span>
+                <span class="text-xs text-slate-500 font-medium">Systems Analysis &bull; Requirements Engineering &bull; ROI</span>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900">
+                Enterprise Tourism Software Platform: System Architecture &amp; Analysis
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                An enterprise-level software specification and systems engineering initiative streamlining complex multi-vendor booking workflows, itinerary orchestration, and financial transaction lifecycles.
+              </p>
+
+              <!-- STAR Format Breakdown -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Problem</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Fragmented third-party APIs and manual reconciliation created operational bottlenecks, booking sync errors, and untraceable customer cancellations.
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Architecture</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Designed complete Software Requirements Specifications (SRS), multi-tiered Data Flow Diagrams (DFD Context &amp; Level 1/2), and relational database schemas.
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider block mb-1">Impact</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Produced a mathematically vetted ROI model demonstrating concrete cost reductions and streamlined data exchange between operators and consumers.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">Systems Analysis</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">DFD Diagrams (L0-L2)</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">Relational DB Modeling</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">ROI Feasibility</span>
+              </div>
+            </div>
+
+            <!-- Action Button / Link -->
+            <div class="lg:w-48 flex flex-col gap-2 shrink-0">
+              <a href="https://github.com/mohamadfarid060304-glitch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-4 py-2.5 text-xs font-semibold text-slate-800 bg-white border border-slate-300 hover:bg-slate-100 rounded-lg transition shadow-sm">
+                <i class="fa-solid fa-file-invoice mr-2"></i> View Specs
+              </a>
+              <span class="text-[11px] text-center text-slate-400">Formal Systems Blueprint</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Souqna E-Commerce Platform -->
+        <article class="project-card bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+            <div class="space-y-4 flex-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded text-xs font-bold bg-blue-100 text-blue-800 font-mono">CASE STUDY #04</span>
+                <span class="text-xs text-slate-500 font-medium">Full-Stack Web &bull; Frontend Engineering &bull; Database</span>
+              </div>
+              <h3 class="text-2xl font-bold text-slate-900">
+                Souqna: Dynamic Merchant &amp; Consumer E-Commerce Platform
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                A full-stack commerce engine featuring product cataloging, dynamic client-side filtering, session management, and persistent relational data storage.
+              </p>
+
+              <!-- STAR Format Breakdown -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Problem</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Regional merchants required an accessible, clean online storefront with zero visual bloat and dependable cart checkout mechanics.
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Architecture</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Architected with modular HTML5, modern CSS3 layout systems, vanilla JavaScript DOM manipulation, and structured SQL backend integration.
+                  </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200">
+                  <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider block mb-1">Impact</span>
+                  <p class="text-xs text-slate-700 leading-relaxed">
+                    Engineered an intuitive, high-conversion user experience with instant client-side cart updates, responsive mobile layout, and zero third-party framework overhead.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">JavaScript</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">HTML5 / CSS3</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">SQL</span>
+                <span class="text-xs font-mono font-medium px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">UI/UX Flow</span>
+              </div>
+            </div>
+
+            <!-- Action Button / Link -->
+            <div class="lg:w-48 flex flex-col gap-2 shrink-0">
+              <a href="https://github.com/mohamadfarid060304-glitch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-4 py-2.5 text-xs font-semibold text-slate-800 bg-white border border-slate-300 hover:bg-slate-100 rounded-lg transition shadow-sm">
+                <i class="fa-brands fa-github mr-2"></i> View Code
+              </a>
+              <span class="text-[11px] text-center text-slate-400">Full-stack implementation</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. PROFESSIONAL EXPERIENCE & LEADERSHIP -->
+  <section id="experience" class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl">
+        <span class="text-xs font-bold tracking-wider uppercase text-blue-600">Career Trajectory</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
+          Professional Experience &amp; Leadership
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm leading-relaxed">
+          Demonstrated track record of industrial engineering exposure, disciplined self-driven roadmap execution, and organizational leadership.
+        </p>
+      </div>
+
+      <!-- Corporate Timeline -->
+      <div class="mt-12 relative border-l-2 border-slate-300 ml-4 md:ml-6 space-y-10">
+        
+        <!-- Experience Item 1 -->
+        <div class="relative pl-6 md:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-blue-600 group-hover:scale-110 transition"></div>
+          
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <h3 class="text-lg font-bold text-slate-900">
+                Practical Engineering Training | Production Facility
+              </h3>
+              <span class="text-xs font-mono font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded">BEDO (Bedo Technology for Engineering Education)</span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium mt-1">Industrial Hardware Systems &bull; Quality Assurance &bull; Manufacturing Workflows</p>
+            
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Gained rigorous on-site exposure to industrial manufacturing cycles, hardware calibration, and real-world system testing standards.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Collaborated with senior production engineers to diagnose hardware-software interfaces and verify circuit consistency on educational engineering equipment.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Reinforced strict industrial safety, protocol compliance, and precision component assembly methodologies.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="relative pl-6 md:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-slate-900 group-hover:scale-110 transition"></div>
+          
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <h3 class="text-lg font-bold text-slate-900">
+                Strategic AI Engineering Milestone Execution
+              </h3>
+              <span class="text-xs font-mono font-semibold text-slate-700 bg-slate-100 px-2.5 py-1 rounded">6-Month Dedicated AI Roadmap</span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium mt-1">Self-Directed Technical Mastery &bull; Applied Computer Vision &bull; Data Pipelines</p>
+            
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Architected and executed an intensive 6-month curriculum covering deep learning mathematics, computer vision architectures (YOLO, OpenCV), and production inference optimization.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Conducted structured exploratory data analysis (EDA) using Pandas, NumPy, Matplotlib, and Seaborn to formulate data pipelines from raw benchmarks.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Demonstrated exceptional self-management and rapid technological adoption, meeting 100% of defined technical sprint deliverables.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience Item 3 -->
+        <div class="relative pl-6 md:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-slate-500 group-hover:scale-110 transition"></div>
+          
+          <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <h3 class="text-lg font-bold text-slate-900">
+                Creative Leadership &amp; Project Management
+              </h3>
+              <span class="text-xs font-mono font-semibold text-slate-700 bg-slate-100 px-2.5 py-1 rounded">Collegiate Events &amp; Tournaments</span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium mt-1">Cross-Functional Coordination &bull; Brand Assets &bull; Digital Distribution Systems</p>
+            
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Directed the visual brand identity, marketing layouts, and physical tournament collateral for competitive university faculty events.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Standardized and automated digital certificate generation workflows, eliminating human error for hundreds of event participants.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-blue-600 text-xs mt-1 shrink-0"></i>
+                <span>Managed stakeholder deadlines and collaborated across multidisciplinary committees under tight public launch schedules.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. CONTACT & RECRUITER FOOTER -->
+  <footer id="contact" class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+        
+        <!-- Left 7 cols -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950 text-blue-400 border border-blue-800 text-xs font-semibold">
+            <i class="fa-solid fa-envelope-circle-check"></i> Direct Recruiter Channel
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            Ready to contribute to your engineering team.
+          </h2>
+          
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-xl">
+            Whether you are building high-throughput backend services, intelligent vision applications, or edge-level firmware, let's connect to discuss how my skillset aligns with your hiring goals.
+          </p>
+
+          <!-- Direct Channels -->
+          <div class="space-y-3 font-mono text-sm pt-2">
+            <div class="flex items-center gap-3 text-slate-300">
+              <div class="w-8 h-8 rounded bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400">
+                <i class="fa-solid fa-envelope text-xs"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-500 block">Official Email</span>
+                <a href="mailto:mohamadfarid060304@gmail.com" class="hover:text-blue-400 transition font-semibold">mohamadfarid060304@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-300">
+              <div class="w-8 h-8 rounded bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400">
+                <i class="fa-solid fa-phone text-xs"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-500 block">Direct Mobile / WhatsApp</span>
+                <a href="tel:+201224846822" class="hover:text-emerald-400 transition font-semibold">+20 122 484 6822</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 cols (Quick Links & Cards) -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-6 bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+          <div>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Verified Professional Links</h3>
+            
+            <div class="space-y-3">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/mohamed-el-gabrony-data-science" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-lg bg-slate-900 hover:bg-blue-950 border border-slate-800 hover:border-blue-700 transition group">
+                <div class="flex items-center gap-3">
+                  <i class="fa-brands fa-linkedin text-blue-400 text-lg"></i>
+                  <div>
+                    <span class="text-sm font-semibold text-white block">LinkedIn Profile</span>
+                    <span class="text-xs text-slate-400 font-mono">mohamed-el-gabrony-data-science</span>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-blue-400 transition"></i>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/mohamadfarid060304-glitch" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-600 transition group">
+                <div class="flex items-center gap-3">
+                  <i class="fa-brands fa-github text-white text-lg"></i>
+                  <div>
+                    <span class="text-sm font-semibold text-white block">GitHub Repositories</span>
+                    <span class="text-xs text-slate-400 font-mono">mohamadfarid060304-glitch</span>
+                  </div>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-white transition"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom Notice -->
+          <div class="pt-4 border-t border-slate-800/80 text-[11px] text-slate-500">
+            Available for in-person interviews in Cairo and remote technical discussions internationally.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; 2026 Mohamed Farid. Designed with high-trust enterprise specifications.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-300 transition">Back to Top &uarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
